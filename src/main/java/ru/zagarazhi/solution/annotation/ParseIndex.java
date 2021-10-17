@@ -1,0 +1,14 @@
+package ru.zagarazhi.solution.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface ParseIndex {
+    int headerIndex() default -1;
+    String headerName() default "";
+}
